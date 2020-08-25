@@ -20,7 +20,7 @@ return
 	Suspend, Toggle
 return
 
-MsgBox,Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno",10000
+MsgBox,Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"
 
 #IfWinActive ahk_exe javaw.exe ;Ensures your keyboard functions normally outside of Minecraft.
 	
