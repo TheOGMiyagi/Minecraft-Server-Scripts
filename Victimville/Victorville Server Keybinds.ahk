@@ -20,7 +20,7 @@ return
 	Suspend, Toggle
 return
 
-;MsgBox, Key Binds:`nNumpad0 = "Good Game"`nNumpad2 = "Enemies Behind Us"`nNumpad4 = "Enemies On Our Left"`nNumpad5 = "Enemies On The Objective"`nNumpad6 = "Enemies On The Right"
+MsgBox,Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno",10000
 
 #IfWinActive ahk_exe javaw.exe ;Ensures your keyboard functions normally outside of Minecraft.
 	
