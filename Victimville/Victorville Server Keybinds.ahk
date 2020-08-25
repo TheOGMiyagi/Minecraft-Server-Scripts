@@ -3,6 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #MaxThreadsPerHotkey 3
+#SingleInstance Force
 
 ;This script is for making hotkeyed commands on the Minecraft Victorville Server.
 ;IP: victorville.wtf
@@ -12,15 +13,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 - Open Private GitHub Repository
 */
 
-*F4:: ;Killswitch
-	ExitApp
-return
+MsgBox, Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"
 
-*F3:: ;Suspend Hotkeys
+!F4:: ExitApp ;Killswitch
+
+!F3:: ;Suspend Hotkeys
 	Suspend, Toggle
 return
-
-MsgBox,Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"
 
 #IfWinActive ahk_exe javaw.exe ;Ensures your keyboard functions normally outside of Minecraft.
 	
@@ -85,63 +84,65 @@ MsgBox,Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`n
 		Sleep 100
 	return
 	
+	
 	;Edit the first "Send," command to determine your chat message's functionality.
 	;Edit the <text> with the string you want to inject into the chat.
-	/* Numpad1::
+	
+	;Numpad1::
 		Send, {/} ;Use "{/}" for commands and "{t}" for messages
 		Sleep 150
-		SendInput, {Numpad1}! ;Desired Message goes here.
+		SendInput, {Numpad1}! ;Desired Key goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
-	return */
+	return 
 	
-	/*Numpad2::
+	;Numpad2::
 		Send, {/} ;Opens Chat
 		Sleep 150
 		SendInput, {Numpad2} ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
-	return */
+	return
 	
-	/* Numpad3::
+	;Numpad3::
 		Send, {/} ;Opens Chat
 		Sleep 150
 		SendInput, {Numpad3} ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
-	return  */
+	return  
 	
-	/*Numpad4::
+	;Numpad4::
 		Send, {/} ;Opens Chat
 		Sleep 150
 		SendInput, {Numpad4} ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
-	return */
+	return 
 	
-	/*Numpad5::
+	;Numpad5::
 		Send, {/} ;Opens Chat
 		Sleep 150
 		SendInput, {Numpad5} ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
-	return */
+	return
 	
-	/*Numpad6::
+	;Numpad6::
 		Send, {/} ;Opens Chat
 		Sleep 150
 		SendInput, {Numpad6} ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
-	return */
+	return
 	
-	Numpad7::;Claim Chunk For Faction
+	Numpad7:: ;Claim Chunk For Faction
 		Send, {/} ;Opens Chat
 		Sleep 150
 		Send, {Text}f claim;Desired Message goes here.
@@ -150,7 +151,7 @@ MsgBox,Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`n
 		Sleep 100
 	return 
 	
-	Numpad8::
+	Numpad8:: ;Faction Fly
 	Send, {/} ;Opens Chat
 	Sleep 150
 	Send, {Text}f fly ;Desired Message goes here.
