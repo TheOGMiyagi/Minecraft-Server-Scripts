@@ -13,7 +13,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 - Open Private GitHub Repository
 */
 
-MsgBox, Command Hotkeys, Key Binds:`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"
+MsgBox, Key Binds:`n`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"
 
 !F4:: ExitApp ;Killswitch
 
