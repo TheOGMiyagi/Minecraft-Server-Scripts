@@ -13,13 +13,18 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 - Open Private GitHub Repository
 */
 
-MsgBox, Key Binds:`n`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"
+If (!WinExist("ahk_exe javaw.exe"))
+{
+	MsgBox,,Slow Down There!!!, Please launch Minecraft before running this script!,3
+	ExitApp
+}
+Else
+{
+	MsgBox,,, Key Binds:`n`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`n`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"`n`nNumpad7 = "/f claim"`nNumpad8 = "/f fly"`nNumpad9 = "/f unclaim",10
+}
 
 !F4:: ExitApp ;Killswitch
-
-!F3:: ;Suspend Hotkeys
-	Suspend, Toggle
-return
+!F3:: Suspend, Toggle ;Suspend Hotkeys
 
 #IfWinActive ahk_exe javaw.exe ;Ensures your keyboard functions normally outside of Minecraft.
 	
@@ -30,7 +35,7 @@ return
 	NumpadDot::	;TP Plot Home
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, p home! ;Desired Message goes here.
+		Send, {Text}p home! ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 	return
@@ -38,7 +43,7 @@ return
 	NumpadEnter::	;Open Shop
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, shop! ;Desired Message goes here.
+		Send, {Text}shop! ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 	return
@@ -46,7 +51,7 @@ return
 	NumpadAdd::	;TPA Accept
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, tpaccept! ;Desired Message goes here.
+		Send, {Text}tpaccept! ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 	return
@@ -54,7 +59,7 @@ return
 	NumpadSub::	;TPA Ignore
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, tpno ;Desired Message goes here.
+		Send, {Text}tpno ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 	return
@@ -62,14 +67,14 @@ return
 	NumpadMult::	;TPA Here
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, tpahere! ;Desired Message goes here.
+		Send, {Text}tpahere ! ;Desired Message goes here.
 		Sleep 100
 	return
 	
 	NumpadDiv::	;TPA
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, tpa ;Desired Message goes here.
+		Send, {Text}tpa ! ;Desired Message goes here.
 		Sleep 100
 	return
 	
@@ -78,7 +83,7 @@ return
 	Numpad0:: ;TP Faction Home
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, f home! ;Desired Message goes here.
+		Send, {Text}f home! ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
