@@ -9,8 +9,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;IP: victorville.wtf
 
 /*TO-DO List:
-- Make Script close with Minecraft
-- Open Private GitHub Repository
+- Add "/f tnt" commands
 */
 
 If (!WinExist("ahk_exe javaw.exe"))
@@ -20,7 +19,7 @@ If (!WinExist("ahk_exe javaw.exe"))
 }
 Else
 {
-	MsgBox,,, Key Binds:`n`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`n`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"`n`nNumpad7 = "/f claim"`nNumpad8 = "/f fly"`nNumpad9 = "/f unclaim",10
+	MsgBox,,Victorville Server Keybinds - Legend, Key Binds:`n`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`n`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"`n`nNumpad7 = "/f claim"`nNumpad8 = "/f fly"`nNumpad9 = "/f unclaim",10
 }
 
 !F4:: ExitApp ;Killswitch
