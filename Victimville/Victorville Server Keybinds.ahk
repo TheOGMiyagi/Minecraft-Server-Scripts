@@ -34,7 +34,7 @@ Else
 	NumpadDot::	;TP Plot Home
 		Send, {/} ;Opens Chat
 		Sleep 150
-		Send, {Text}p home! ;Desired Message goes here.
+		Send, {Text}p home ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 	return
@@ -42,7 +42,7 @@ Else
 	NumpadEnter::	;Open Shop
 		Send, {/} ;Opens Chat
 		Sleep 150
-		Send, {Text}shop! ;Desired Message goes here.
+		Send, {Text}shop ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 	return
@@ -50,7 +50,7 @@ Else
 	NumpadAdd::	;TPA Accept
 		Send, {/} ;Opens Chat
 		Sleep 150
-		Send, {Text}tpaccept! ;Desired Message goes here.
+		Send, {Text}tpaccept ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 	return
@@ -66,14 +66,14 @@ Else
 	NumpadMult::	;TPA Here
 		Send, {/} ;Opens Chat
 		Sleep 150
-		Send, {Text}tpahere ! ;Desired Message goes here.
+		Send, {Text}tpahere  ;Desired Message goes here.
 		Sleep 100
 	return
 	
 	NumpadDiv::	;TPA
 		Send, {/} ;Opens Chat
 		Sleep 150
-		Send, {Text}tpa ! ;Desired Message goes here.
+		Send, {Text}tpa  ;Desired Message goes here.
 		Sleep 100
 	return
 	
@@ -82,7 +82,7 @@ Else
 	Numpad0:: ;TP Faction Home
 		Send, {/} ;Opens Chat
 		Sleep 150
-		Send, {Text}f home! ;Desired Message goes here.
+		Send, {Text}f home ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
