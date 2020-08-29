@@ -19,7 +19,7 @@ If (!WinExist("ahk_exe javaw.exe"))
 }
 Else
 {
-	MsgBox,,Victorville Server Keybinds - Legend, Key Binds:`n`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`n`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"`n`nNumpad7 = "/f claim"`nNumpad8 = "/f fly"`nNumpad9 = "/f unclaim",10
+	MsgBox,,Victorville Server Keybinds - Legend, Key Binds:`n`nNumpad0 = "/f home"`nNumpadDot = "/p home"`nNumpadEnter = "/shop"`n`nNumpadDiv = "/tpa "`nNumpadMult = "/tpahere "`nNumpadAdd = "/tpaccept"`nNumpadSub = "/tpno"`n`nNumpad4 = "/f tnt take 64"`nNumpad5 = "/f tnt addall"`nNumpad6 = "/f tnt add 64"`n`nNumpad7 = "/f claim"`nNumpad8 = "/f fly"`nNumpad9 = "/f unclaim",10
 }
 
 !F4:: ExitApp ;Killswitch
@@ -119,28 +119,28 @@ Else
 		Sleep 100
 	return  
 	
-	;Numpad4::
+	Numpad4::	;Take 1 Stack of TNT to faction TNT Bank
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, {Numpad4} ;Desired Message goes here.
+		Send, {Text}f tnt take 64 ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
 	return 
 	
-	;Numpad5::
+	Numpad5::	;Add all of your TNT to faction TNT Bank
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, {Numpad5} ;Desired Message goes here.
+		Send, {Text}f tnt addall ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
 	return
 	
-	;Numpad6::
+	Numpad6::	;Add 1 Stack of TNT to faction TNT Bank
 		Send, {/} ;Opens Chat
 		Sleep 150
-		SendInput, {Numpad6} ;Desired Message goes here.
+		Send, {Text}f tnt add 64 ;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
@@ -149,7 +149,7 @@ Else
 	Numpad7:: ;Claim Chunk For Faction
 		Send, {/} ;Opens Chat
 		Sleep 150
-		Send, {Text}f claim;Desired Message goes here.
+		Send, {Text}f claim	;Desired Message goes here.
 		Sleep 150
 		Send, {Enter} ;Automatically Sends to Game Chat
 		Sleep 100
@@ -158,7 +158,7 @@ Else
 	Numpad8:: ;Faction Fly
 	Send, {/} ;Opens Chat
 	Sleep 150
-	Send, {Text}f fly ;Desired Message goes here.
+	Send, {Text}f fly	;Desired Message goes here.
 	Sleep 150
 	Send, {Enter} ;Automatically Sends to Game Chat
 	Sleep 100
@@ -167,7 +167,7 @@ Else
 	Numpad9::
 	Send, {/} ;Opens Chat
 	Sleep 150
-	Send {Text}f unclaim ;Desired Message goes here.
+	Send {Text}f unclaim	;Desired Message goes here.
 	Sleep 150
 	Send, {Enter} ;Automatically Sends to Game Chat
 	Sleep 100
